@@ -1,5 +1,4 @@
 import streamlit as st
-import joblib 
 import pickle
 import numpy as np
 import pandas as pd
@@ -12,7 +11,7 @@ st.title("Fetal Health Prediction App")
 st.write("### Dataset Preview")
 st.dataframe(data.head())
 
-model = joblib.load("model.pkl")
+model = pickle.load('C:\Users\Admin\Desktop\dsf_pt13\Phase5\model.pkl','rb')
 
 """   # FIX: show only first rows
 
