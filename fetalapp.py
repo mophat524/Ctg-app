@@ -1,5 +1,5 @@
 import streamlit as st
-import pickle
+import joblib
 import numpy as np
 import pandas as pd
 
@@ -11,19 +11,16 @@ st.title("Fetal Health Prediction App")
 st.write("### Dataset Preview")
 st.dataframe(data.head())
 
-model = pickle.load('model.pkl','rb')
 
-"""   # FIX: show only first rows
+
+ # FIX: show only first rows
 
 # Load model
 model = joblib.load("model.pkl")
 
 st.divider()
 
-st.write(
-This app uses a machine learning model to predict fetal health.
-Enter the values below and click Predict.
-)
+st.write("This app uses a machine learning model to predict fetal health.Enter the values below and click Predict.")
 
 st.divider()
 
@@ -112,11 +109,11 @@ if st.button("Predict"):
             st.write({
                 "Normal": round(probs[0], 3),
                 "Suspected": round(probs[1], 3),
-                "Pathological": round(probs[2], 3)
+                "Abnormal": round(probs[2], 3)
             })
 
     except Exception as e:
         st.error(f"Error: {e}")
 
 else:
-    st.info("Please enter values and click Predict")"""
+    st.info("Please enter values and click Predict")
