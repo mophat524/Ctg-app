@@ -7,7 +7,7 @@ import pandas as pd
 data = pd.read_csv("fetal_health.csv")
 st.title("Fetal Health Prediction App")
 
-st.write("### Dataset Preview")
+"""st.write("### Dataset Preview")
 st.dataframe(data.head())   # FIX: show only first rows
 
 # Load model
@@ -15,10 +15,10 @@ model = joblib.load("model.pkl")
 
 st.divider()
 
-st.write("""
+st.write(
 This app uses a machine learning model to predict fetal health.
 Enter the values below and click Predict.
-""")
+)
 
 st.divider()
 
@@ -114,4 +114,4 @@ if st.button("Predict"):
         st.error(f"Error: {e}")
 
 else:
-    st.info("Please enter values and click Predict")
+    st.info("Please enter values and click Predict")"""
