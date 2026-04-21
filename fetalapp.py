@@ -1,5 +1,5 @@
 import streamlit as st
-#import joblib
+import joblib as jb
 import numpy as np
 import pandas as pd
 
@@ -8,10 +8,12 @@ data = pd.read_csv("fetal_health.csv")
 
 st.title("Fetal Health Prediction App")
 
-st.dataframe(data.head()) 
+st.write("### Dataset Preview")
+st.dataframe(data.head())
 
-"""st.write("### Dataset Preview")
-st.dataframe(data.head())   # FIX: show only first rows
+model = jb.load("model.pkl")
+
+"""   # FIX: show only first rows
 
 # Load model
 model = joblib.load("model.pkl")
