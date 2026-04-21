@@ -8,6 +8,8 @@ data = pd.read_csv("fetal_health.csv")
 
 st.title("Fetal Health Prediction App")
 
+st.dataframe(data.head()) 
+
 """st.write("### Dataset Preview")
 st.dataframe(data.head())   # FIX: show only first rows
 
