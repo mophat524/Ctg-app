@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 
 # Load data (preview only)
-data = pd.read_csv("fetal_health.csv")
+#data = pd.read_csv("fetal_health.csv")
 st.title("Fetal Health Prediction App")
 
 """st.write("### Dataset Preview")
