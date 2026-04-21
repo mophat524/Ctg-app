@@ -11,7 +11,7 @@ st.title("Fetal Health Prediction App")
 st.write("### Dataset Preview")
 st.dataframe(data.head())
 
-model = pickle.load('C:\Users\Admin\Desktop\dsf_pt13\Phase5\model.pkl','rb')
+model = pickle.load('model.pkl','rb')
 
 """   # FIX: show only first rows
 
