@@ -16,7 +16,7 @@ st.dataframe(data.head())
  # FIX: show only first rows
 
 # Load model
-model = joblib.load("model.pkl")
+model = joblib.load("gb_smote_model.pkl")
 
 st.divider()
 
